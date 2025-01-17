@@ -1,0 +1,14 @@
+{
+  "name": "sanber63-cypress-kelompok7",
+  "version": "1.0.0",
+  "description": "Quiz 2 Sanbercode bootcamp 63",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kelompok 7",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.0.0"
+  }
+}
