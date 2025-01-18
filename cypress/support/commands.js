@@ -31,6 +31,7 @@ Cypress.Commands.add('login', (email, password) => {
     cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2 > span').click()
 })
 
+
 Cypress.Commands.add('inputText', (locator, text) => {
     cy.get(locator)
     .should('be.visible')
@@ -74,3 +75,4 @@ Cypress.Commands.add('verifySnackbar', (snackbarLocator, snackbarTextLocator, te
 Cypress.Commands.add('verifyElementIsVisible', (locator) => {
     cy.get(locator).should('be.visible')
 })
+
