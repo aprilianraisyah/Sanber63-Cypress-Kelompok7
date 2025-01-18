@@ -28,6 +28,7 @@
 Cypress.Commands.add('login', (email, password) => {
     cy.get('#email').type(email)
     cy.get('#pass').type(password)
+    cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2 > span').click()
 })
 
 Cypress.Commands.add('userLogin', (email, password, loginBtn) => {
