@@ -25,7 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 // Login
-Cypress.Commands.add('login', (email, password, loginBtn) => {
+Cypress.Commands.add('userLogin', (email, password, loginBtn) => {
     cy.get('#email').type(email)
     cy.get('#pass').type(password)
     cy.get('#send2').click()

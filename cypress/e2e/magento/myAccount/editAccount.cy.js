@@ -20,7 +20,7 @@ beforeEach(() => {
         pengguna = data[0];
         //Login
         cy.visit('/')
-        cy.login(pengguna.email, pengguna.password)
+        cy.userLogin(pengguna.email, pengguna.password)
         cy.verifyContainText(PageObject.signedInUser, value.welcomeText)
     });
 
@@ -142,7 +142,7 @@ describe('Edit Account Information - Email', () => {
         cy.klik(PageObject.saveBtn)
         cy.url().should('eq', value.loginPageURL)
         cy.verifySnackbar(PageObject.snackBarSuccess, PageObject.snackBarSuccessText, value.successUpdateMessage)
-        cy.login(randomEmail, user.password)
+        cy.userLogin(randomEmail, user.password)
         // Update email in users.json
         cy.task('updateEmailInUsersJson', { randomEmail, randomPassword: user.password })
 
@@ -188,7 +188,7 @@ describe('Edit Account Information - Password', () => {
         cy.klik(PageObject.saveBtn)
         cy.url().should('eq', value.loginPageURL)
         cy.verifySnackbar(PageObject.snackBarSuccess, PageObject.snackBarSuccessText, value.successUpdateMessage)
-        cy.login(randomEmail, randomPassword)
+        cy.userLogin(randomEmail, randomPassword)
         // Update email in users.json
         cy.task('updateEmailInUsersJson', { randomEmail, randomPassword })
     })

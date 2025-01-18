@@ -17,7 +17,7 @@ beforeEach(() => {
 
     //Login
     cy.visit('/')
-    cy.login(user.email, user.password)
+    cy.userLogin(user.email, user.password)
     cy.verifyContainText(PageObject.signedInUser, value.welcomeText)
 
     //Buka My Account 
