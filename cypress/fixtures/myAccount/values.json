@@ -1,0 +1,15 @@
+{
+    "successUpdateMessage" : "You saved the account information.", 
+    "requiredFieldErrorText" :"This is a required field.", 
+    "firstNameInvalid" : "First Name is not valid!", 
+    "lastNameInvalid" : "Last Name is not valid!", 
+    "loginPageURL" : "https://magento.softwaretestingboard.com/customer/account/login/", 
+    "welcomeText" : "Welcome", 
+    "myAccount" : "My Account", 
+    "addressBook" : "Address Book", 
+    "editAccount" : "Edit Account Information", 
+    "emailFormatValidation" :"Please enter a valid email address.",
+    "wrongPasswordMessage": "The password doesn't match this account. Verify the password and try again.",
+    "successUpdateAddressMessage": "You saved the address.",
+    "wrongConfirmationPassword": "Please enter the same value again."
+}
