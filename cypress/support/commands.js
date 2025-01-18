@@ -30,10 +30,3 @@ Cypress.Commands.add('login', (email, password) => {
     cy.get('#pass').type(password)
     cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2 > span').click()
 })
-
-Cypress.Commands.add('inputText', (locator, text) => {
-    cy.get(locator)
-    .should('be.visible')
-    .clear()
-    .type(text)
-})
