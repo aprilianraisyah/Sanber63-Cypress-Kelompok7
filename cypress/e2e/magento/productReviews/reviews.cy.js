@@ -1,3 +1,4 @@
+import basePage from "../../../support/basePage.js";
 import reviewPage from "../../../support/pageObject/review.page.js";
 const reviewsInfo = require('../../../fixtures/productReviews/reviews.json');
 const userLogin = require('../../../fixtures/userLogin.json');
@@ -7,7 +8,8 @@ describe('Product Reviews Feature', () => {
   describe('Positive Case - Product Reviews Feature', () => {
 
     beforeEach( 'Success Login and Access Product', function () {
-      cy.visit('/');
+      basePage.open();
+      basePage.verifyUrlBasePage();
       cy.login(userLogin.email, userLogin.password);
       reviewPage.clickWhatsNew();
       reviewPage.clickProductName();
@@ -69,7 +71,8 @@ describe('Product Reviews Feature', () => {
   describe.only('Negative Case - Product Reviews Feature', () => {
     
     beforeEach( 'Success Login and Access Product', function () {
-      cy.visit('/');
+      basePage.open();
+      basePage.verifyUrlBasePage();
       cy.login(userLogin.email, userLogin.password);
       reviewPage.clickWhatsNew();
       reviewPage.clickProductName();
