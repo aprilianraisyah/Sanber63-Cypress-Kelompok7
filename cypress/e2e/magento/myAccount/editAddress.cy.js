@@ -3,7 +3,7 @@ import users from '../../../fixtures/myAccount/users.json'
 const value = require("../../../fixtures/myAccount/values.json")
 
 const PageObject = new pageObject()
-const user = users[0]
+const user = users[1]
 const telephone = "081291381921"
 const company = "BUMN"
 const street = "Jalan Assalamualaiku Waalaikumussalam"

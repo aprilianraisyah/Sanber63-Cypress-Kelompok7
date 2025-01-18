@@ -140,15 +140,17 @@ describe('Edit Account Information - Email', () => {
         cy.input(PageObject.emailField, randomEmail)
         cy.input(PageObject.currentPasswordField, user.password)
         cy.klik(PageObject.saveBtn)
-        cy.url().should('eq', value.loginPageURL)
-        cy.verifySnackbar(PageObject.snackBarSuccess, PageObject.snackBarSuccessText, value.successUpdateMessage)
-        cy.userLogin(randomEmail, user.password)
-        // Update email in users.json
+
         cy.task('updateEmailInUsersJson', { randomEmail, randomPassword: user.password })
 
         cy.readFile('cypress/fixtures/myAccount/users.json').then((updatedData) => {
             const updatedEmail = updatedData[0].email;
         })
+        
+        cy.url().should('eq', value.loginPageURL)
+        cy.verifySnackbar(PageObject.snackBarSuccess, PageObject.snackBarSuccessText, value.successUpdateMessage)
+        cy.userLogin(randomEmail, user.password)
+        // Update email in users.json
     })
 
 })
