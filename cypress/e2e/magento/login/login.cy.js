@@ -26,7 +26,7 @@ describe('Login Tests with Page Object', () => {
 
     it('Negative - Login failed with invalid email', () => {
         loginPage.fillEmail('invalid_email@example.com');
-        loginPage.fillPassword('wrongpassword');
+        loginPage.fillPassword('wongpassword');
         loginPage.clickLogin();
         loginPage.verifyErrorMessage('The account sign-in was incorrect or your account is disabled temporarily.');
     });
